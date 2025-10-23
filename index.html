@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raster Graphics — Logo + Right Panel</title>
+  <link rel="stylesheet" href="./style.css" />
+  <meta name="description" content="Foreground PNG used as logo at top-left; right-side info panel with title and description; background covers viewport."/>
+</head>
+<body>
+  <!-- 左上角：小正方形 LOGO 容器（只放 PNG） -->
+  <div class="logo" aria-label="site logo">
+    <img
+      class="logo-img"
+      src="./images/me-480.png"
+      alt="Logo: cut-out portrait with burger hat"
+      width="240"
+      srcset="./images/me-480.png 1x, ./images/me-960.png 2x, ./images/me-1440.png 3x"
+      decoding="async" fetchpriority="high">
+  </div>
+
+  <!-- 右侧信息面板：标题 + 文字介绍 -->
+  <aside class="info-panel" role="complementary">
+    <h1>Criminal Wanted</h1>
+    <p>
+    Take a close look — this is the webpage of an evil criminal who devoured all the Krabby Patties
+    at the famous Bikini Bottom restaurant, the Krusty Krab, and then escaped. 
+    She is now announcing her wicked and grand plan to the world.
+  </p>
+  <img 
+    src="./images/wanted.jpg" 
+    alt="Wanted Poster of the Burger Hat Criminal" 
+    class="poster">
+
+  <p>
+    Just like the burger hat she wears, her passion for hamburgers knows no bounds. 
+    She will continue to hunt down every burger across the globe.
+  </p>
+</aside>
+
+  <!-- 叠加渐变，提升对比度（可留可去） -->
+  <div class="overlay" aria-hidden="true"></div>
+</body>
+</html>
