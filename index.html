@@ -8,7 +8,19 @@
   <meta name="description" content="Foreground PNG used as logo at top-left; right-side info panel with title and description; background covers viewport."/>
 </head>
 <body>
-  <!-- 左上角：小正方形 LOGO 容器（只放 PNG） -->
+  <a href="index.html" id="logo">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+    <title>Yufei Song’s Web Design Logo</title>
+    <defs>
+      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#ff9900; stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#ffcc66; stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="250" cy="250" r="200" fill="url(#grad)" />
+    <text x="250" y="280" text-anchor="middle" font-size="120" fill="#fff" font-family="Arial Black">YS</text>
+  </svg>
+</a>
   <div class="logo" aria-label="site logo">
     <img
       class="logo-img"
@@ -19,7 +31,6 @@
       decoding="async" fetchpriority="high">
   </div>
 
-  <!-- 右侧信息面板：标题 + 文字介绍 -->
   <aside class="info-panel" role="complementary">
     <h1>Criminal Wanted</h1>
     <p>
@@ -38,7 +49,6 @@
   </p>
 </aside>
 
-  <!-- 叠加渐变，提升对比度（可留可去） -->
   <div class="overlay" aria-hidden="true"></div>
 </body>
 </html>
